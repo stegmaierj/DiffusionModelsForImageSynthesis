@@ -4,7 +4,7 @@
 
 <br>
 This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding mircorscopy image data based on Denoising Diffusion Probabilistic Models (DDPM).<br><br>
-<img src="figures/example_data.svg" alt="Examplary sketches and corresponding synthetic data." align="middle" /><br>
+<img src="figures/example_data.png" alt="Examplary sketches and corresponding synthetic data." align="middle" /><br>
 
 <!---
 If you are using the code, please consider citing the following work:
