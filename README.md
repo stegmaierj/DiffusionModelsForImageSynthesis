@@ -8,7 +8,7 @@ Sketches are generated to indicate cell shapes and structural characteristics, a
 <img src="figures/example_data.png" alt="Examplary sketches and corresponding synthetic data." align="middle" /><em>Exemplary synthetic samples from our experiments</em><br><br>
 
 
-If you are using the code, please cite the following work:
+If you are using code or data, please cite the following work:
 ```
 @inproceeding{eschweiler2022celldiffusion,
   title={Annotation-Free Segmentation in Fluorescence Microscopy Image Data using Diffusion Models},
