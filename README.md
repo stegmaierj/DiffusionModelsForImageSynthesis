@@ -1,4 +1,4 @@
-# Annotation-Free Segmentation in Fluorescence Microscopy Image Data using Diffusion Model
+# Annotation-Free Segmentation in Fluorescence Microscopy Image Data using Diffusion Models
 <br>
 This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding mircorscopy image data based on Denoising Diffusion Probabilistic Models (DDPM).
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.<br><br>
