@@ -1,4 +1,4 @@
-# Annotation-Free Segmentation in Fluorescence Microscopy Image Data using Diffusion Models
+# Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets
 <br>
 This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding mircorscopy image data based on Denoising Diffusion Probabilistic Models (DDPM).
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.
@@ -9,7 +9,7 @@ Those generated data sets are available at <a href="https://osf.io/tba">OSF</a>.
 If you are using code or data, please cite the following work:
 ```
 @inproceeding{eschweiler2022celldiffusion,
-  title={Annotation-Free Segmentation in Fluorescence Microscopy Image Data using Diffusion Models},
+  title={Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets},
   author={Dennis Eschweiler and Ina Laube and Abin Jose and Johannes Stegmaier},
   booktitle={arXiv},
   year={2022}
