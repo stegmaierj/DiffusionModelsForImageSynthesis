@@ -10,7 +10,7 @@ If you are using code or data, please cite the following work:
 ```
 @inproceeding{eschweiler2022celldiffusion,
   title={Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets},
-  author={Dennis Eschweiler and Ina Laube and Abin Jose and Johannes Stegmaier},
+  author={Dennis Eschweiler and Johannes Stegmaier},
   booktitle={arXiv},
   year={2022}
 }
