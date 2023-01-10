@@ -42,8 +42,8 @@ class module_UNet2D_pixelshuffle_inject(nn.Module):
         self.out_activation = out_activation # relu | leakyrelu | sigmoid | tanh | hardtanh | none
         
         self.norm_methods = {
-            'instance': nn.InstanceNorm3d,
-            'batch': nn.BatchNorm3d,
+            'instance': nn.InstanceNorm2d,
+            'batch': nn.BatchNorm2d,
             'none': nn.Identity
             }
         
