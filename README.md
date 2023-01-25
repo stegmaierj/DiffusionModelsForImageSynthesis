@@ -2,16 +2,16 @@
 <br>
 This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding microscopy image data based on Denoising Diffusion Probabilistic Models (DDPM).
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.
-Generated data sets are available at <a href=https://osf.io/dnp65/>OSF</a>.<br><br>
+Generated data sets are available at <a href=https://osf.io/dnp65/>OSF</a> and a preprint is available at <a href=https://arxiv.org/abs/2301.10227>arXiv/2301.10227</a>.<br><br>
 <img src="figures/example_data.png" alt="Examplary sketches and corresponding synthetic data." align="middle" /><em>Exemplary synthetic samples from our experiments</em><br><br><br>
 
 
 If you are using code or data, please cite the following work:
 ```
-@inproceeding{eschweiler2022celldiffusion,
+@article{eschweiler2022celldiffusion,
   title={Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets},
   author={Dennis Eschweiler and Johannes Stegmaier},
-  booktitle={arXiv},
+  journal={arXiv/2301.10227},
   year={2022}
 }
 ```
