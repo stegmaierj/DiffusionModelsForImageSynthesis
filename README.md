@@ -12,7 +12,7 @@ If you are using code or data, please cite the following work:
   title={Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets},
   author={Dennis Eschweiler and Johannes Stegmaier},
   journal={arXiv/2301.10227},
-  year={2022}
+  year={2023}
 }
 ```
 <br><br><br>
