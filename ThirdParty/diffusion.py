@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Code adapted from https://github.com/w86763777/pytorch-ddpm/blob/master/diffusion.py and https://huggingface.co/blog/annotated-diffusion
 
+import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
