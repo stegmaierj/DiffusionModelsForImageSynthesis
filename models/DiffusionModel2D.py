@@ -207,6 +207,7 @@ class DiffusionModel2D(pl.LightningModule):
         parser.add_argument('--test_list', default='/path/to/testing_data/split1_test.csv', type=str)
         parser.add_argument('--val_list', default='/path/to/validation_data/split1_val.csv', type=str)
         parser.add_argument('--image_groups', default=('data/diffusion_mask',), type=str, nargs='+')
+        parser.add_argument('--mask_groups', default=('',), type=str, nargs='+')
         parser.add_argument('--image_noise_channel', default=-1, type=int)
         parser.add_argument('--mask_noise_channel', default=-1, type=int)
         parser.add_argument('--noise_type', default='gaussian', type=str) 
