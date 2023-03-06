@@ -10,7 +10,7 @@ import torchvision
 from argparse import ArgumentParser, Namespace
 from torch.utils.data import DataLoader
 from dataloader.h5_dataloader import MeristemH5Dataset
-from utils.diffusion import GaussianDiffusionTrainer, GaussianDiffusionSampler
+from ThirdParty.diffusion import GaussianDiffusionTrainer, GaussianDiffusionSampler
  
     
     
