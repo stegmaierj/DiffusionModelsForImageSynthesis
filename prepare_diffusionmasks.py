@@ -14,7 +14,7 @@ from skimage import io, measure, morphology
 
 from utils.h5_converter import h5_writer, h5_reader, add_group, remove_h5_group, calculate_flows
 from utils.utils import print_timestamp
-from utils.diffusion import GaussianDiffusionTrainer
+from ThirdParty.diffusion import GaussianDiffusionTrainer
 
 #%% 
 # Generate diffusion masks
