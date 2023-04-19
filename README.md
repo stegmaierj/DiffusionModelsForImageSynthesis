@@ -15,12 +15,13 @@ If you are using code or data, please cite the following work:
   year={2023}
 }
 ```
+Repository contribution by Dennis Eschweiler, Rüveyda Yilmaz and Johannes Stegmaier.
 <br><br><br>
 The following gives a <em>very brief</em> overview of the functionality. 
 More details and more thorough instructions will follow shortly.
 
 ## Diffusion Model Training
-To prepare your own data for training of the diffusion model, please use `utils.h5_conveter.prepapre_images` to convert the image data to the hdf5 format and use `utils.csv_generator.create_csv` to create a csv file listing all training data.
+To prepare your own data for training of the diffusion model, please use `utils.h5_conveter.prepare_images` to convert the image data to the hdf5 format and use `utils.csv_generator.create_csv` to create a csv file listing all training data.
 Make sure to adapt all parameters in the pipeline files `models/DiffusionModel3D` and `models/DiffusionModel2D`, and in the training script `train_script.py`, or use command line arguments to adapt all parameters at once.
 Run `train_script.py` to train the model.
 
