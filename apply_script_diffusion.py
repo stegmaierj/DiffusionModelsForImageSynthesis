@@ -11,11 +11,12 @@ import numpy as np
 import torch
 import csv
 from skimage import io
+from scipy.ndimage import gaussian_filter
 from argparse import ArgumentParser
 from torch.autograd import Variable
 
 from dataloader.h5_dataloader import MeristemH5Tiler as Tiler
-from ThirdParty.diffusion import GaussianDiffusionTrainer, GaussianDiffusionSampler
+from utils.diffusion import GaussianDiffusionTrainer, GaussianDiffusionSampler
 from utils.utils import print_timestamp
 
 SEED = 1337
@@ -115,30 +116,36 @@ def main(hparams):
                 norm_map = np.full((hparams.out_channels,)+working_size, 0, dtype=np.float32)
                 
                 for patch_idx in range(tiler.__len__()):
-                    
+                
                     print_timestamp('Processing patch {0}/{1}...',(patch_idx+1, tiler.__len__()))
                     
                     # Get the input
                     sample = tiler.__getitem__(patch_idx)
+                    
+                    # Apply gaussian blur to image data
+                    if hparams.blur_sigma>0:
+                        for ndim in range(sample[hparams.input_batch].shape[0]-1):
+                            sample[hparams.input_batch][ndim,...] = gaussian_filter(sample[hparams.input_batch][ndim,...], hparams.blur_sigma, order=0)
+                    
                     data = Variable(torch.from_numpy(sample[hparams.input_batch][np.newaxis,...]).cuda())
                     data = data.float() 
-                    
-                    pred_patch = data[:,0:1,...].clone()      
+
+                    pred_patch = data[:,:-1,...].clone()      
                     pred_patch,_,_ = DiffusionTrainer(pred_patch, hparams.timesteps_start-1)
                     
-                    cond = data[:,1:,...].clone()
+                    cond = data[:,-1:,...].clone()
                     
                     _,pred_patch = DiffusionSampler(pred_patch, cond)
                     
                     # Convert final patch to numpy for saving
                     pred_patch = [p.cpu().data.numpy() for p in pred_patch]
                     pred_patch = np.array(pred_patch)
-                    if '2d' in hparams.pipeline.lower():
-                        pred_patch = pred_patch[:,0,...] #remove batch dimension
-                    else:
-                        pred_patch = np.squeeze(pred_patch)
-                    print(pred_patch.shape)
-                    print('_'*20)
+                    #if '2d' in hparams.pipeline.lower():
+                    #    pred_patch = pred_patch[:,0,...] #remove batch dimension
+                    #else:
+                    #    pred_patch = np.squeeze(pred_patch)
+                    pred_patch = pred_patch[:,0,...] #remove batch dimension
+                    pred_patch = np.reshape(pred_patch, (pred_patch.shape[0]*pred_patch.shape[1],)+pred_patch.shape[2:])
                     
                     #pred_patch = np.squeeze(pred_patch)
                     pred_patch = np.clip(pred_patch, hparams.clip[0], hparams.clip[1])
@@ -147,6 +154,7 @@ def main(hparams):
                     slicing = tuple(map(slice, (0,)+tuple(tiler.patch_start+tiler.global_crop_before), (hparams.out_channels,)+tuple(tiler.patch_end+tiler.global_crop_before)))
                                 
                     # Add predicted patch and fading weights to the corresponding maps
+                    print(pred_patch.shape)
                     predicted_img[slicing] = predicted_img[slicing]+pred_patch*fading_map
                     norm_map[slicing] = norm_map[slicing]+fading_map
                     
@@ -230,7 +238,7 @@ if __name__ == '__main__':
     parent_parser.add_argument(
         '--input_batch',
         type=str,
-        default='image',
+        default='mask',
         help='which part of the batch is used as input (image | mask)'
     )
     
@@ -252,7 +260,7 @@ if __name__ == '__main__':
     parent_parser.add_argument(
         '--timesteps_start',
         type=int,
-        default=600,
+        default=400,
         help='number of steps between saves'
     )
     
@@ -261,6 +269,13 @@ if __name__ == '__main__':
         type=int,
         default=100,
         help='number of steps between saves'
+    )
+    
+    parent_parser.add_argument(
+        '--blur_sigma',
+        type=int,
+        default=1,
+        help='sigma of gaussian blur used on input data'
     )
     
     parent_parser.add_argument(
