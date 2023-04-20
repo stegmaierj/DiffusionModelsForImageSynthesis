@@ -17,8 +17,8 @@ If you are using code or data, please cite the following work:
 ```
 Repository contribution by Dennis Eschweiler, Rüveyda Yilmaz and Johannes Stegmaier.
 <br><br><br>
-The following gives a <em>very brief</em> overview of the functionality. 
-More details and more thorough instructions will follow shortly.
+We provide Jupyter Notebooks to provide an overview of how to train and apply the image generation process. The following gives a <em>very brief</em> overview of the general functionality. 
+
 
 ## Diffusion Model Training
 To prepare your own data for training of the diffusion model, please use `utils.h5_conveter.prepare_images` to convert the image data to the hdf5 format and use `utils.csv_generator.create_csv` to create a csv file listing all training data.
