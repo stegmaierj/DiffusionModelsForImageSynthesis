@@ -17,7 +17,7 @@ If you are using code or data, please cite the following work:
 ```
 Repository contribution by Dennis Eschweiler, Rüveyda Yilmaz and Johannes Stegmaier.
 <br><br><br>
-We provide Jupyter Notebooks to provide an overview of how to train and apply the image generation process. The following gives a <em>very brief</em> overview of the general functionality. 
+Jupyter Notebooks provide an overview of how to train and apply the image generation process. The following gives a <em>very brief</em> overview of the general functionality. 
 
 
 ## Diffusion Model Training
