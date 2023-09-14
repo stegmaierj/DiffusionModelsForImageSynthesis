@@ -11,12 +11,11 @@ If you are using code or data, please cite the following work:
 ```
 @article{eschweiler2022celldiffusion,
   title={Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets},
-  author={Dennis Eschweiler and Johannes Stegmaier},
+  author={Dennis Eschweiler and Rüveyda Yilmaz and Matisse Baumann and Ina Laube and Rijo Roy and Abin Jose and Daniel Brückner and Johannes Stegmaier},
   journal={arXiv/2301.10227},
   year={2023}
 }
 ```
-Repository contribution by Dennis Eschweiler, Rüveyda Yilmaz and Johannes Stegmaier.
 <br><br><br>
 Jupyter Notebooks provide an overview of how to train and apply the image generation process. The following gives a <em>very brief</em> overview of the general functionality. 
 
