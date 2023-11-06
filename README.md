@@ -4,7 +4,11 @@ This repository contains code to simulated 2D/3D cellular structures and synthes
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.
 Generated data sets are available at <a href=https://osf.io/dnp65/>OSF</a> and a preprint is available at <a href=https://arxiv.org/abs/2301.10227>arXiv/2301.10227</a>.
 To access the trained models and get a showcase of the fully-simulated data sets, please visit to our <a href=https://transfer.lfb.rwth-aachen.de/CellDiffusion>website</a> (work in progress).<br><br>
-<img src="figures/example_data.png" alt="Examplary sketches and corresponding synthetic data." align="middle" /><em>Exemplary synthetic samples from our experiments</em><br><br><br>
+<img src="figures/example_data.png" alt="Diverse examplary synthetic data samples." align="middle" width="100%" /><br>
+<img src="figures/multi-channel.png" alt="Synthetic multi-channel data sample." align="middle" width="32.8%" />
+<img src="figures/overlapping_cells.png" alt="Synthetic data sample of overlapping cells." align="middle" width="32.8%" />
+<img src="figures/timeseries.gif" alt="Synthetic timeseries data sample." align="middle" width="32.8%" /><br>
+<em>Exemplary synthetic samples from our experiments</em><br><br><br>
 
 
 If you are using code or data, please cite the following work:
@@ -21,7 +25,7 @@ Jupyter Notebooks provide an overview of how to train and apply the image genera
 
 
 ## Diffusion Model Training
-To prepare your own data for training of the diffusion model, please use `utils.h5_conveter.prepare_images` to convert the image data to the hdf5 format and use `utils.csv_generator.create_csv` to create a csv file listing all training data.
+To prepare your own data for training of the diffusion model, please use `utils.h5_converter.prepare_images` to convert the image data to the hdf5 format and use `utils.csv_generator.create_csv` to create a csv file listing all training data.
 Make sure to adapt all parameters in the pipeline files `models/DiffusionModel3D` and `models/DiffusionModel2D`, and in the training script `train_script.py`, or use command line arguments to adapt all parameters at once.
 Run `train_script.py` to train the model.
 
