@@ -4,10 +4,8 @@ This repository contains code to simulated 2D/3D cellular structures and synthes
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.
 Generated data sets are available at <a href=https://osf.io/dnp65/>OSF</a> and a preprint is available at <a href=https://arxiv.org/abs/2301.10227>arXiv/2301.10227</a>.
 To access the trained models and get a showcase of the fully-simulated data sets, please visit to our <a href=https://transfer.lfb.rwth-aachen.de/CellDiffusion>website</a> (work in progress).<br><br>
-<img src="figures/example_data.png" alt="Diverse examplary synthetic data samples." align="middle" width="100%" /><br>
-<img src="figures/multi-channel.png" alt="Synthetic multi-channel data sample." align="middle" width="32.8%" />
-<img src="figures/overlapping_cells.png" alt="Synthetic data sample of overlapping cells." align="middle" width="32.8%" />
-<img src="figures/timeseries.gif" alt="Synthetic timeseries data sample." align="middle" width="32.8%" /><br>
+<span style="white-space:nowrap"><img src="figures/example_data.png" alt="Diverse examplary synthetic data samples." align="middle" width="100%" /><br>
+<span style="white-space:nowrap"><img src="figures/multi-channel.png" alt="Synthetic multi-channel data sample." align="middle" width="32.7%" />&nbsp; <img src="figures/overlapping_cells.png" alt="Synthetic data sample of overlapping cells." align="middle" width="32.7%" />&nbsp; <img src="figures/timeseries.gif" alt="Synthetic timeseries data sample." align="middle" width="32.7%" /></span></span><br>
 <em>Exemplary synthetic samples from our experiments</em><br><br><br>
 
 
