@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 26 15:53:32 2022
 
-@author: eschweiler
-"""
 
 import os
 import ipywidgets as wg
@@ -385,6 +381,11 @@ def get_apply_parameter_widgets(param_dict):
                 param_dict[key] = ' '.join([str(p) for p in param_dict[key]])
             widget_list.append(wg.Text(description='Image Groups:', value=param_dict[key], style=style))
             param_names.append('--'+key)
+        elif key == 'mask_groups':
+            if not param_dict[key] is str:
+                param_dict[key] = ' '.join([str(p) for p in param_dict[key]])
+            widget_list.append(wg.Text(description='Mask Groups:', value=param_dict[key], style=style))
+            param_names.append('--'+key)
         elif key == 'sh_order':
             widget_list.append(wg.BoundedIntText(description='SH Order:', value=param_dict[key], min=0, max=10000, style=style))
             param_names.append('--'+key)
@@ -442,9 +443,6 @@ def get_sim_parameter_widgets(param_dict):
             param_names.append('--'+key)
         elif key == 'radius_range':
             widget_list.append(wg.BoundedIntText(description='Radius Range:', value=param_dict[key], min=-100, max=100, style=style))
-            param_names.append('--'+key)
-        elif key == 'psf':
-            widget_list.append(wg.Text(description='PSF:', value=param_dict[key], style=style))
             param_names.append('--'+key)
         elif key == 'sh_order':
             widget_list.append(wg.BoundedIntText(description='Sh Order :', value=param_dict[key], min=1, max=100, style=style))
