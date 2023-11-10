@@ -232,7 +232,7 @@ class GaussianDiffusionSampler(nn.Module):
             
             if time_step%self.t_save == 0:
                 x_intermediate.append(x_t.cpu())
-                print('saved {0}'.format(time_step))
+                print('Processing timestep {0}'.format(time_step))
         x_0 = x_t
         return x_0, x_intermediate
 
