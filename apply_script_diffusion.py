@@ -16,7 +16,7 @@ from argparse import ArgumentParser
 from torch.autograd import Variable
 
 from dataloader.h5_dataloader import MeristemH5Tiler as Tiler
-from utils.diffusion import GaussianDiffusionTrainer, GaussianDiffusionSampler
+from ThirdParty.diffusion import GaussianDiffusionTrainer, GaussianDiffusionSampler
 from utils.utils import print_timestamp
 
 SEED = 1337
