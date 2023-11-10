@@ -196,7 +196,7 @@ class DiffusionModel3D(pl.LightningModule):
         parser.add_argument('--out_channels', default=1, type=int)
         parser.add_argument('--feat_channels', default=16, type=int)
         parser.add_argument('--t_channels', default=128, type=int)
-        parser.add_argument('--patch_size', default=(64,128,128), type=int, nargs='+')
+        parser.add_argument('--patch_size', default=(32,128,128), type=int, nargs='+')
         parser.add_argument('--layer_norm', default='instance', type=str)
         parser.add_argument('--out_activation', default='none', type=str)
 
