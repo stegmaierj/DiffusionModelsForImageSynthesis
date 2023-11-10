@@ -22,11 +22,11 @@ If you are using code or data, please cite the following work:
 We provide Jupyter Notebooks that give an overview of how to preprocess your data, train and apply the image generation process. The following gives a <em>very brief</em> overview of the general functionality, for more detailed examples we refer to the notebooks. 
 
 ## Data Preparation
-The presented pipelines require the hdf5 file format for processing. Therefore, each image file has to be converted to hdf5, which can be done by using `utils.h5_converter.prepare_images`. Once all files have been contered, a list of those files has to be stored as a csv file to make them accessible by the processing pipelines. This can be done by using `utils.csv_generator.create_csv`. A more detailed explanation is given in `jupyter_preparation_script.ipynb`.
+The presented pipelines require the hdf5 file format for processing. Therefore, each image file has to be converted to hdf5, which can be done by using `utils.h5_converter.prepare_images`. Once all files have been converted, a list of those files has to be stored as a csv file to make them accessible by the processing pipelines. This can be done by using `utils.csv_generator.create_csv`. A more detailed explanation is given in `jupyter_preparation_script.ipynb`.
 
 
 ## Diffusion Model Training and Application
-To use the proposed pipeline to either train or apply your models, make sure to adapt all parameters in the pipeline files `models/DiffusionModel3D` or `models/DiffusionModel2D`, and in the training script `train_script.py` or application script `apply_script_diffusion.py`. Alternatively, it is recommended to use command line arguments to adapt all parameters at once. A more detailed explanation is given in `jupyter_train_script.ipynb` and `jupyter_apply_script.ipynb`..
+To use the proposed pipeline to either train or apply your models, make sure to adapt all parameters in the pipeline files `models/DiffusionModel3D` or `models/DiffusionModel2D`, and in the training script `train_script.py` or application script `apply_script_diffusion.py`. Alternatively, all parameters can be provided as command line arguments. A more detailed explanation is given in `jupyter_train_script.ipynb` and `jupyter_apply_script.ipynb`.
 
 
 ## Simulation of Cellular Structures and Sketch Generation
