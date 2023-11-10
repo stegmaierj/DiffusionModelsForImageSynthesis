@@ -154,7 +154,6 @@ def main(hparams):
                     slicing = tuple(map(slice, (0,)+tuple(tiler.patch_start+tiler.global_crop_before), (hparams.out_channels,)+tuple(tiler.patch_end+tiler.global_crop_before)))
                                 
                     # Add predicted patch and fading weights to the corresponding maps
-                    print(pred_patch.shape)
                     predicted_img[slicing] = predicted_img[slicing]+pred_patch*fading_map
                     norm_map[slicing] = norm_map[slicing]+fading_map
                     
