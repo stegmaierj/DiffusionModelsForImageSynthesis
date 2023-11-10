@@ -117,7 +117,7 @@ def main(hparams):
                 
                 for patch_idx in range(tiler.__len__()):
                 
-                    print_timestamp('Processing patch {0}/{1}...',(patch_idx+1, tiler.__len__()))
+                    print_timestamp('Generating patch {0}/{1}...',(patch_idx+1, tiler.__len__()))
                     
                     # Get the input
                     sample = tiler.__getitem__(patch_idx)
