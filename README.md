@@ -31,3 +31,13 @@ To use the proposed pipeline to either train or apply your models, make sure to 
 
 ## Simulation of Cellular Structures and Sketch Generation
 Since the proposed approach is working in a very intuitive manner, sketches can generally be created in any arbitrary way. We mainly focused on using and adapting simulation techniques proposed in <a href='https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260509'>3D fluorescence microscopy data synthesis for segmentation and benchmarking</a>. Nevertheless, the functionality used in this work can be found in `utils.synthetic_cell_membrane_masks` and `utils.synthetic_cell_nuclei_masks` for cellular membranes and nuclei, respectively.
+
+## Processing Times and Hardware Requirements
+Due to the layout and working principle of the computation cluster we used, determining precise hardware requirements was difficult. 
+The used hardware offered varying hardware capabilities, including GPUs ranging from GTX 1080 to RTX 6000.
+Nevertheless, the following should give some brief indication of the specifications needed to run the presented pipelines. 
+
+Training times varied between one day for 2D models to roughly a week for 3D models, requiring 2-8 GB of RAM and 4-8 GB of GPU memory.
+Prediction times were highly varying, as they are influences by the choice of the backward starting point $t_\mathrm{start}$ and the total image size.
+For the proposed starting point $t_\mathrm{start}=400$, image generation times ranged between less than a minute for 2D image data of size 1024x1024 pixel to roughly one hour for image data of size 512x512x180 voxel or 1700x2450x13 voxel.
+Memory requirements were similarly varying, ranging between 2-80 GB of RAM and 4-8 GB of GPU memory.
