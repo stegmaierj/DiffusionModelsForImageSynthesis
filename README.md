@@ -11,11 +11,14 @@ To access the trained models and get a showcase of the fully-simulated data sets
 
 If you are using code or data, please cite the following work:
 ```
-@article{eschweiler2022celldiffusion,
-  title={Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets},
-  author={Dennis Eschweiler and Rüveyda Yilmaz and Matisse Baumann and Ina Laube and Rijo Roy and Abin Jose and Daniel Brückner and Johannes Stegmaier},
-  journal={arXiv/2301.10227},
-  year={2023}
+@article{eschweiler2024celldiffusion,
+  title={Denoising diffusion probabilistic models for generation of realistic fully-annotated microscopy image datasets},
+  author={Eschweiler, Dennis and Yilmaz, R{\"u}veyda and Baumann, Matisse and Laube, Ina and Roy, Rijo and Jose, Abin and Br{\"u}ckner, Daniel and Stegmaier, Johannes},
+  journal={PLOS Computational Biology},
+  volume={20},
+  number={2},
+  pages={e1011890},
+  year={2024}
 }
 ```
 <br><br><br>
