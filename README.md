@@ -2,7 +2,7 @@
 <br>
 This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding microscopy image data based on Denoising Diffusion Probabilistic Models (DDPM).
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.
-Generated data sets are available at <a href=https://osf.io/dnp65/>OSF</a> and the article is available at <a href=[https://arxiv.org/abs/2301.10227](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011890)>PLOS CB</a>.
+Generated data sets are available at <a href=https://osf.io/dnp65/>OSF</a> and the article is available at <a href=https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011890>PLOS CB</a>.
 To access the trained models and get a showcase of the fully-simulated data sets, please visit to our <a href=https://transfer.lfb.rwth-aachen.de/CellDiffusion>website</a> (work in progress).<br><br>
 <span style="white-space:nowrap"><img src="figures/example_data.png" alt="Diverse examplary synthetic data samples." align="middle" width="100%" /><br>
 <span style="white-space:nowrap"><img src="figures/multi-channel.png" alt="Synthetic multi-channel data sample." align="middle" width="32.7%" /><img src="figures/overlapping_cells.png" alt="Synthetic data sample of overlapping cells." align="middle" width="32.7%" /><img src="figures/timeseries.gif" alt="Synthetic timeseries data sample." align="middle" width="32.7%" /></span></span><br>
