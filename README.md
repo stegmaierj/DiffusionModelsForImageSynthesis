@@ -1,4 +1,19 @@
+<div align="center">
+
 # Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets
+
+Dennis Eschweiler, Rüveyda Yilmaz, Matisse Baumann, Ina Laube, Rijo Roy, Abin Jose, Daniel Brückner, Johannes Stegmaier
+
+*PLOS Computational Biology, 2024*
+
+[![Paper](https://img.shields.io/badge/Paper-PLOS_Comput._Biol.-0b5394?style=for-the-badge)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011890)
+[![Datasets](https://img.shields.io/badge/Datasets-OSF-2b7a78?style=for-the-badge)](https://osf.io/dnp65/)
+[![Models](https://img.shields.io/badge/Models-Project_Website-6a4c93?style=for-the-badge)](https://transfer.lfb.rwth-aachen.de/CellDiffusion)
+[![Follow-up](https://img.shields.io/badge/Follow--up-BVDM-24292f?style=for-the-badge&logo=github)](https://github.com/ruveydayilmaz0/BVDM)
+
+</div>
+
+
 <br>
 This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding microscopy image data based on Denoising Diffusion Probabilistic Models (DDPM).
 Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.
